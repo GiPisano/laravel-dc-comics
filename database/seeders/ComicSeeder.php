@@ -26,7 +26,7 @@ class ComicSeeder extends Seeder
             $comic->price = $faker->randomFloat(1, 20, 30);
             $comic->series = $faker->words(3, true);
             $comic->sale_date = $faker->date('Y_m_d');
-            $comic->type = $faker->words(3, true);
+            $comic->type = $faker->text(30);
 
             $comic->save();
     

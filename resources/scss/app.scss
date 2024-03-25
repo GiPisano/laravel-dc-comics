@@ -9,3 +9,13 @@
         flex-grow: 1;
     }
 }
+
+.img-show{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container-img-show{
+    height: 360px;
+}
