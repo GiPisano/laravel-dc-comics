@@ -7,7 +7,8 @@
    
     <div class="container">
         <h1>Comic description</h1>
-            <a href="{{ route('comics.index')}}" class="btn btn-primary mb-3">torna alla lista</a>
+        <a href="{{ route('comics.create')}}" class="btn btn-primary mb-3">Crea una nuova lista</a>
+        <a href="{{ route('comics.index')}}" class="btn btn-primary mb-3">torna alla lista</a>
         <div class="row g-5">
             <div class="col-4">
                 <img src="{{ $comic->thumb }}" alt="">
