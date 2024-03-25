@@ -11,6 +11,9 @@
           <li class="nav-item">
             <a @class(['nav-link', 'active' => Route::currentRouteName() == 'home']) aria-current="page" href="{{ route('home') }}">Home</a>
           </li>
+          <li>
+            <a @class(['nav-link', 'active' => Route::currentRouteName() == 'comics']) aria-current="page" href="{{ route('comics.index') }}">comics</a>
+          </li>
       </div>
     </div>
   </nav>
