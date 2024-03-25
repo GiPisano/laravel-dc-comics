@@ -7,6 +7,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Faker\Generator as Faker;
 
+
 class ComicSeeder extends Seeder
 {
     /**
@@ -14,22 +15,21 @@ class ComicSeeder extends Seeder
      *
      * @return void
      */
-    public function run(Faker $faker)
+    public function run()
     {
-        for ($i = 0; $i < 50; $i++) {
+        $comics = config('comics');
         
+        foreach($comics as $comicData){
             $comic = new Comic;
-            
-            $comic->title = $faker->word();
-            $comic->description = $faker->paragraphs(2, true);
-            $comic->thumb = $faker->imageUrl(360, 360, 'comic', true);
-            $comic->price = $faker->randomFloat(1, 20, 30);
-            $comic->series = $faker->words(3, true);
-            $comic->sale_date = $faker->date('Y_m_d');
-            $comic->type = $faker->text(30);
 
+            $comic->title = $comicData['title'];
+            $comic->description = $comicData['description'];
+            $comic->thumb = $comicData['thumb'];
+            $comic->price = $comicData['price'];
+            $comic->series = $comicData['series'];
+            $comic->sale_date = $comicData['sale_date'];
+            $comic->type = $comicData['type'];
             $comic->save();
-    
-        }   
+        }
     }
 }
