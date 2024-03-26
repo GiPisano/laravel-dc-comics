@@ -6,8 +6,8 @@
 
    
     <div class="container">
-        <h1>Comic description</h1>
-        <a href="{{ route('comics.create')}}" class="btn btn-primary mb-3">Crea una nuova lista</a>
+        <h1 class="my-4">{{ $comic->title }}</h1>
+        <a href="{{ route('comics.create')}}" class="btn btn-primary mb-3">Inserisci un nuovo fumetto</a>
         <a href="{{ route('comics.index')}}" class="btn btn-primary mb-3">torna alla lista</a>
         <div class="row g-5">
             <div class="col-4 container-img-show">
@@ -17,17 +17,21 @@
                 <h2 class="h4">Description</h2>
                 <p>{{ $comic->description }}</p>
             
-            <div class="row">
-                <div class="col-6">
-                    <h2 class="h4">Price</h2>
-                    <p>{{ $comic->price }}</p>
-                </div>
-                <div class="col-6">
-                    <h2 class="h4">Sale date</h2>
-                    <p>{{ $comic->sale_date }}</p>
+                <div class="row">
+                    <div class="col-4">
+                        <h2 class="h4">Price</h2>
+                        <p>{{ $comic->price }}</p>
+                    </div>
+                    <div class="col-4">
+                        <h2 class="h4">Sale date</h2>
+                        <p>{{ $comic->sale_date }}</p>
+                    </div>
+                    <div class="col-4">
+                        <h2 class="h4">Series</h2>
+                        <p>{{ $comic->series }}</p>
+                    </div>
                 </div>
             </div>
-        </div>
         </div>
     </div>
     
