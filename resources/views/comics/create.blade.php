@@ -6,7 +6,7 @@
 
    <section>
        <div class="container">
-        <h1>Inserisci un nuovo fumetto</h1>
+        <h1 class="text-center">Inserisci un nuovo fumetto</h1>
         <a href="{{ route('comics.index')}}" class="btn btn-primary mb-3">torna alla lista</a>
            <form action="{{ route('comics.store') }}" method="POST">
                @csrf
