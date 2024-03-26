@@ -7,8 +7,11 @@
    
     <div class="container">
         <h1 class="my-4">{{ $comic->title }}</h1>
-        <a href="{{ route('comics.create')}}" class="btn btn-primary mb-3">Inserisci un nuovo fumetto</a>
-        <a href="{{ route('comics.index')}}" class="btn btn-primary mb-3">torna alla lista</a>
+        <div class="text-center">
+            <a href="{{ route('comics.create')}}" class="btn btn-primary mb-3">Inserisci un nuovo fumetto</a>
+            <a href="{{ route('comics.index')}}" class="btn btn-primary mb-3">torna alla lista</a>
+            <a href="{{ route('comics.edit', $comic) }}" class="btn btn-primary mb-3">Modifica</a>
+        </div>
         <div class="row g-5">
             <div class="col-4 container-img-show">
                 <img src="{{ $comic->thumb }}" alt="" class="img-show">

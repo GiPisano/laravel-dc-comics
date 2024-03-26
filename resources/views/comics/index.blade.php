@@ -24,12 +24,12 @@
             <td>{{ $comic->type }}</td>
             <td class="d-flex justify-content-between">
               <div>
-                <a href="{{ route('comics.show', $comic->id) }}">
+                <a href="{{ route('comics.show', $comic) }}">
                   <i class="fa-solid fa-eye fa-lg" style="color: #0c4d13;"></i>
                 </a>
               </div>
               <div>
-                <a href="{{ route('comics.show', $comic->id) }}">
+                <a href="{{ route('comics.edit', $comic) }}">
                   <i class="fa-solid fa-pen fa-lg" style="color: #203fa4;"></i>
                 </a>
               </div>
